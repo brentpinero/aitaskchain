@@ -203,8 +203,8 @@ def get_next_task(
     return [{"task_name": task_name} for task_name in new_tasks if task_name.strip()]
 
 
-class BabyAGI(Chain, BaseModel):
-    """Controller model for the BabyAGI agent."""
+class TaskChain(Chain, BaseModel):
+    """Controller model for the Task Chain agent."""
 
     task_list: deque = Field(default_factory=deque)
     task_creation_chain: TaskCreationChain = Field(...)
@@ -316,8 +316,8 @@ class BabyAGI(Chain, BaseModel):
     @classmethod
     def from_llm(
         cls, llm: BaseLLM, vectorstore: VectorStore, verbose: bool = False, **kwargs
-    ) -> "BabyAGI":
-        """Initialize the BabyAGI Controller."""
+    ) -> "TaskChain":
+        """Initialize the TaskChain Controller."""
         task_creation_chain = TaskCreationChain.from_llm(llm, verbose=verbose)
         task_prioritization_chain = TaskPrioritizationChain.from_llm(
             llm, verbose=verbose
@@ -345,8 +345,8 @@ verbose = False
 # If None, will keep on going forever
 max_iterations: Optional[int] = max_iterations
 
-baby_agi = BabyAGI.from_llm(
+task_chain = TaskChain.from_llm(
     llm=llm, vectorstore=vectorstore, verbose=verbose, max_iterations=max_iterations
 )
 
-baby_agi({"objective": OBJECTIVE})
+task_chain({"objective": OBJECTIVE})

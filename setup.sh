@@ -49,8 +49,8 @@ read iterations
 echo "MAX_ITERATIONS=$iterations" >> .env 
 
 echo ""
-echo "Congrats your BabyAGI project is ready!"
-echo "Run 'python baby.py' to start the program"
+echo "Congrats your Task Chain project is ready!"
+echo "Run 'python taskchain.py' to start the program"
 
 
 
