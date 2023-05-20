@@ -1,4 +1,4 @@
-# Task Chain
+# Task Chain Manual
 
 This Python script is like a smart to-do list manager. It uses tools from OpenAI and Pinecone to make, organize, and complete tasks. The cool thing about this system is that it makes new tasks based on what happened with the old tasks and a set goal. It uses OpenAI's language understanding skills to make new tasks based on this goal, and Pinecone to keep track of and get back task results for reference.
 
