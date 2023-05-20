@@ -34,7 +34,7 @@ The script works by running an infinite loop that does the following steps:
 ## **AI Chains**
 
  </br>
-
+ 
 ### **Task Creation Chain**
 
 The task_creation_agent() function uses OpenAI's tools to generate new tasks based on the goal and the outcome of the previous task. This function takes in four inputs: the goal, the result of the previous task, the task description, and the current list of tasks. It sends a message to OpenAI's system, which then returns a list of new tasks in string format. The function then gives back these new tasks as a list of dictionaries, where each dictionary contains the name of the task.
