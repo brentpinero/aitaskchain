@@ -19,6 +19,7 @@ serpapi_api_key = config("SERP_API_KEY")
 max_iterations = config("MAX_ITERATIONS")
 pinecone_env = config("PINECONE_ENVIRONMENT")
 pinecone_api_key = config("PINECONE_API_KEY")
+pinecone_index_name = config("TABLE_NAME")
 
 embeddings_model = OpenAIEmbeddings(openai_api_key=open_api_key)
 pinecone.init(api_key=pinecone_api_key, environment=pinecone_env)
