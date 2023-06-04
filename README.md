@@ -4,15 +4,50 @@ This Python script is like a smart to-do list manager. It uses tools from OpenAI
 
 This README will cover the following:
 
-- [How the program works](#how-it-works)
+- [How to use the program](#setup_instructions)
 
-- [How to use the program](#how-to-use)
+- [How the program works](#how-it-works)
 
 - [How to craft an objective](#creating-an-objective)
 
 - [Warning about running the script continuously](#continous-script-warning)
   </br>
   </br>
+
+# Setup Instructions<a name="setup_instructions"></a>
+
+Before you start, ensure that you have Python (3.6 or higher), Git, and pip installed on your machine.
+
+1. Clone the repository using git: </br>
+   `git clone https://github.com/brentpinero/aitaskchain.git`
+
+2. Navigate to the project's directory: </br>
+   `cd aitaskchain`
+
+3. Now, execute the setup script to install the required dependencies and to create the environment file (.env) that will store your API keys and other required parameters: </br>
+   `./setup.sh`
+   </br>
+   </br>
+   The setup.sh script will ask you for various inputs:
+
+   -OpenAI API Key</br>
+   -OpenAI Model (e.g., gpt-3.5 turbo, gpt-4)</br>
+   -Temperature for text generation</br>
+   -Serp API Key</br>
+   -Pinecone API Key</br>
+   -Pinecone Environment</br>
+   -Pinecone Index Table</br>
+   -Maximum number of iterations</br>
+   </br>
+   Please make sure you have these details at hand, as they are necessary for the proper functioning of the Task Chain.
+   </br>
+   </br>
+
+4. Once you have successfully run `setup.sh`, your environment will be ready, and you can execute the AI Task Chain using:</br>
+   </br>
+   `python taskchain.py`
+
+</br>
 
 # **How It Works**<a name="how-it-works"></a>
 
@@ -55,41 +90,6 @@ The execution_agent() function is where we use OpenAI's tools. This function tak
 
 Lastly, the script uses Pinecone to keep track of and get back task results for reference. The script sets up a Pinecone index, which is like a special database, using the table name you provide in the YOUR_TABLE_NAME variable. Pinecone is then used to save the outcomes of the task in this index, along with the task name and any extra details.
 </br>
-</br>
-
-# How to Use<a name="how-to-use"></a>
-
-Before you start, ensure that you have Python (3.6 or higher), Git, and pip installed on your machine.
-
-1. Clone the repository using git: </br>
-   `git clone https://github.com/brentpinero/aitaskchain.git`
-
-2. Navigate to the project's directory: </br>
-   `cd aitaskchain`
-
-3. Now, execute the setup script to install the required dependencies and to create the environment file (.env) that will store your API keys and other required parameters: </br>
-   `./setup.sh`
-   </br>
-   </br>
-   The setup.sh script will ask you for various inputs:
-
-   -OpenAI API Key</br>
-   -OpenAI Model (e.g., gpt-3.5 turbo, gpt-4)</br>
-   -Temperature for text generation</br>
-   -Serp API Key</br>
-   -Pinecone API Key</br>
-   -Pinecone Environment</br>
-   -Pinecone Index Table</br>
-   -Maximum number of iterations</br>
-   </br>
-   Please make sure you have these details at hand, as they are necessary for the proper functioning of the Task Chain.
-   </br>
-   </br>
-
-4. Once you have successfully run `setup.sh`, your environment will be ready, and you can execute the AI Task Chain using:</br>
-   </br>
-   `python taskchain.py`
-
 </br>
 
 # Crafting an Objective<a name="creating-an-objective"></a>
