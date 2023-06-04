@@ -51,18 +51,21 @@ Before you start, ensure that you have Python (3.6 or higher), Git, and pip inst
 
 # **How It Works**<a name="how-it-works"></a>
 
-The script works by running an infinite loop that does the following steps:
+The taskchain.py script uses APIs such as OpenAI, Pinecone, and SerpAPI to automate task completions. Here is a brief description of the steps:
 
-1. After the Task Creation Chain analyzes the objective and provides a list of tasks, the script grabs the top task from our list of tasks.
+1. The script creates a list of tasks based on the provided objective, and then fetches the top task based on your task list.
    </br>
    </br>
-2. It then sends this task to a part of the system called the execution agent. This agent uses OpenAI's tools to carry out the task, taking into account any relevant information.
+2. It then sends this task to a part of the system called the execution agent. In order to carry out the task, the execution agent uses a SerpAPI tool to scrape relevent information from the internet.
    </br>
    </br>
-3. Once the task is done, the result is enhanced with additional information and stored in Pinecone for future reference.
+3. After execution, the result is stored using Pinecone, a vector database for vector search.
    </br>
    </br>
-4. The system then generates new tasks and rearranges the task list based on the goal and the outcome of the previous task.
+4. New tasks are created based on the result and added to the task queue. The task queue is reprioritized.
+   </br>
+   </br>
+5. The script repeats these steps until the task list is empty or the maximum number of iterations has been reached.
    </br>
    </br>
 
