@@ -1,6 +1,6 @@
 # Task Chain Manual
 
-AI Task Chain, a Python tool, smartly orchestrates a series of tasks to fulfill a specific objective. It uniquely harnesses OpenAI's language comprehension capabilities to develop new tasks influenced by the outcomes of preceding ones. Pinecone is employed to archive and recall task results, aiding future decision-making. This dynamic system loops continuously, halting only upon achieving the objective—indicated by an exhausted task list—or upon reaching a preset iteration threshold.
+AI Task Chain, a Python tool, intelligently orchestrates a series of tasks to fulfill a specific objective. It leverages OpenAI's language comprehension capabilities to develop new tasks influenced by the outcomes of preceding ones. Pinecone is employed to archive and recall task results, aiding future decision-making. This dynamic system loops continuously, halting only upon achieving the objective (a.k.a a fully completed task list) or upon reaching a preset iteration maximum.
 
 This README will cover the following:
 
