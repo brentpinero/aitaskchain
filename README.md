@@ -4,7 +4,7 @@ This Python script is like a smart to-do list manager. It uses tools from OpenAI
 
 This README will cover the following:
 
-- [How to use the program](#setup_instructions)
+- [Setup Instructions](#setup_instructions)
 
 - [How the program works](#how-it-works)
 
@@ -53,7 +53,7 @@ Before you start, ensure that you have Python (3.6 or higher), Git, and pip inst
 
 The script works by running an infinite loop that does the following steps:
 
-1. The script first grabs the top task from our list of tasks.
+1. After the Task Creation Chain analyzes the objective and provides a list of tasks, the script grabs the top task from our list of tasks.
    </br>
    </br>
 2. It then sends this task to a part of the system called the execution agent. This agent uses OpenAI's tools to carry out the task, taking into account any relevant information.
