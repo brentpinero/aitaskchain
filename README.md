@@ -1,6 +1,6 @@
 # Task Chain Manual
 
-This Python script is like a smart to-do list manager. It uses tools from OpenAI and Pinecone to make, organize, and complete tasks. The cool thing about this system is that it makes new tasks based on what happened with the old tasks and a set goal. It uses OpenAI's language understanding skills to make new tasks based on this goal, and Pinecone to keep track of and get back task results for reference.
+AI Task Chain, a Python tool, smartly orchestrates a series of tasks to fulfill a specific objective. It uniquely harnesses OpenAI's language comprehension capabilities to develop new tasks influenced by the outcomes of preceding ones. Pinecone is employed to archive and recall task results, aiding future decision-making. This dynamic system loops continuously, halting only upon achieving the objective—indicated by an exhausted task list—or upon reaching a preset iteration threshold.
 
 This README will cover the following:
 
@@ -16,7 +16,7 @@ This README will cover the following:
 
 # Setup Instructions<a name="setup_instructions"></a>
 
-Before you start, ensure that you have Python (3.6 or higher), Git, and pip installed on your machine.
+Before you start, ensure that you have Python (3.6 or higher), Git, and pip installed on your machine. If you're on Windows or Linux, make sure that you have the latest version of Ubuntu installed on your machine.
 
 1. Clone the repository using git: </br>
    `git clone https://github.com/brentpinero/aitaskchain.git`
@@ -53,10 +53,10 @@ Before you start, ensure that you have Python (3.6 or higher), Git, and pip inst
 
 The taskchain.py script uses APIs such as OpenAI, Pinecone, and SerpAPI to automate task completions. Here is a brief description of the steps:
 
-1. The script creates a list of tasks based on the provided objective, and then fetches the top task based on your task list.
+1. The script creates a list of tasks based on the provided objective, and then identifies and fetches the top priority task for accomplishing the objective.
    </br>
    </br>
-2. It then sends this task to a part of the system called the execution agent. In order to carry out the task, the execution agent uses a SerpAPI tool to scrape relevent information from the internet.
+2. The script then sends this task to a part of the system called the execution agent. In order to carry out the task, the execution agent uses a SerpAPI tool to scrape relevent information from Google Search.
    </br>
    </br>
 3. After execution, the result is stored using Pinecone, a vector database for vector search.
@@ -130,4 +130,4 @@ Remember, the better your objective is defined, the better the AI can fulfill yo
 
 # Warning<a name="continous-script-warning"></a>
 
-This script is designed to be run continuously as part of a task management system. Running this script continuously can result in high API usage, so please use it responsibly. Additionally, the script requires the OpenAI and Pinecone APIs to be set up correctly, so make sure you have set up the APIs before running the script.
+This script is designed to be run continuously as part of a task management system. Running this script continuously can result in high API usage, so please use it responsibly.
