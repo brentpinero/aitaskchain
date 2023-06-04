@@ -109,7 +109,7 @@ When defining your objective, prefix it with "My objective is". This statement e
 
 ## Identify Your Goal
 
-Clearly outline your end goal. Whether it's generating content or fetching data, ensure the desired outcome is stated in simple language.
+Clearly outline your end goal. Whether it's generating content or fetching data, ensure the desired outcome is stated in specific and concise language.
 </br>
 </br>
 
